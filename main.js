@@ -1,38 +1,57 @@
-// Creación de objetos
+// Declaracion de objetos
 
-var creditCard = {
-    owner : "Morty",
-    number : "123-456-789",
-    credit : 200,
-    symbol : "ADC",
+/*var UfosPark = (function(){
+    var instance;
 
-    pay : function(fee){
-        this.credit = this.credit - fee;
+    function createInstance(nombre, id){
+        var object = new UfosPark(nombre, id);
+        return object;
     }
-}
 
-var ufosPark = {
-    fee : 50,
-    availabilityFleet : {
-        ufo1 : "",
-        ufo2 : "",
-        ufo3 : ""
-    },
-
-    dispatch : function dispatch(creditCard){
-        for(let ufo of Object.keys(this.availabilityFleet)){
-            if(ufo.valueOf != ""){
-                creditCard.pay(this.fee);
-                ufo.valueOf = creditCard.owner;
+    return {
+        getInstance : function(nombre, id) {
+            if (!instance) {
+                instance = createInstance(nombre, id);
             }
+            return instance;
         }
-        
-    }
+    };
+})();
+
+var ufo1 = UfosPark.getInstance("Sebas", 12);
+var ufo2 = UfosPark.getInstance("Toni", 14);
+
+console.log(ufo1);
+console.log(ufo2);*/
+
+function UfosPark(name){
+    this.name = name;
+    this.fee = 500;
+    this.float = [];
 }
-console.log(creditCard);
-console.log(ufosPark);
 
-ufosPark.dispatch(creditCard);
 
-console.log(creditCard);
-console.log(ufosPark);
+var instanceUfosPark = (function () {
+
+    let instance;
+
+    function createInstance(name) {
+        var object = new UfosPark(name);
+        return object;
+    }
+ 
+    return {
+        getInstance: function (name) {
+            if (!instance) {
+                instance = createInstance(name);
+            }
+            return instance;
+        }
+    };
+})();
+ 
+var ufos1 = instanceUfosPark.getInstance("sebas");
+var ufos2 = instanceUfosPark.getInstance("alberto");
+
+console.log(ufos1);
+console.log(ufos2); 

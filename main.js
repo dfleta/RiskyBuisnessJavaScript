@@ -13,6 +13,7 @@ ufosPark.addUfo("unx");
 ufosPark.addUfo("dox");
 
 ufosPark.dispatch(abradolph);
+ufosPark.dispatch(abradolph);
 
 console.log(abradolph);
 console.log(ufosPark);

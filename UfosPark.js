@@ -29,15 +29,26 @@ function singletonUfosPark() {
 // Lógica de UfosPark
 
 UfosPark.prototype.dispatch = function(creditCard){
-    if (creditCard.pay(this.fee) == true){
-        for (var [key, value] of this.float){
-            if(value == null){
-                this.float.set(key, creditCard);
-                break;
+    if (!checkCreditCardHasUfo(this.float, creditCard)){
+        if(creditCard.pay(this.fee) === true){
+            for (var [key, value] of this.float){
+                if(value === null){
+                    this.float.set(key, creditCard);
+                    break;
+                }
             }
         }
+       
     }
+}
 
+const checkCreditCardHasUfo = (map, val) => {
+    for (let value of map.values()){
+        if(val === value ){
+            return true;
+        }
+    }
+    return false;
 }
 
 UfosPark.prototype.addUfo = function(ufo){

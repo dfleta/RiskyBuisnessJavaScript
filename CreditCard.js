@@ -8,5 +8,7 @@ function CreditCard(name, numberCard){
 CreditCard.prototype.pay = function(cost){
     if (this.credit >= cost){
         this.credit -= cost;
+        return true;
     }
+    return false;
 }

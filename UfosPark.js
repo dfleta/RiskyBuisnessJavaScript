@@ -7,7 +7,7 @@ function UfosPark(){
 
 // Instanciador de UfosPark, si ya existe instancia devuelve esta (Patrón Singleton)
 
-function instanceUfosPark() {
+function singletonUfosPark() {
 
     let instance;
 
@@ -24,7 +24,7 @@ function instanceUfosPark() {
             return instance;
         }
     };
-}
+};
 
 // Lógica de UfosPark
 
@@ -40,3 +40,5 @@ UfosPark.prototype.addUfo = function(ufo){
         this.float.set(ufo, null);
     }
 }
+
+module.exports.singletonUfosPark = singletonUfosPark;

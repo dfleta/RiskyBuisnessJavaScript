@@ -12,3 +12,5 @@ CreditCard.prototype.pay = function(cost){
     }
     return false;
 }
+
+module.exports = CreditCard;

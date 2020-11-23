@@ -30,7 +30,12 @@ function singletonUfosPark() {
 
 UfosPark.prototype.dispatch = function(creditCard){
     if (creditCard.pay(this.fee) == true){
-
+        for (var [key, value] of this.float){
+            if(value == null){
+                this.float.set(key, creditCard);
+                break;
+            }
+        }
     }
 
 }
@@ -40,5 +45,6 @@ UfosPark.prototype.addUfo = function(ufo){
         this.float.set(ufo, null);
     }
 }
+
 
 module.exports.singletonUfosPark = singletonUfosPark;

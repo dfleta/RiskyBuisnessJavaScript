@@ -9,3 +9,10 @@ console.log(abradolph);
 
 var ufosPark = UfosPark.singletonUfosPark().getInstance();
 
+ufosPark.addUfo("unx");
+ufosPark.addUfo("dox");
+
+ufosPark.dispatch(abradolph);
+
+console.log(abradolph);
+console.log(ufosPark);

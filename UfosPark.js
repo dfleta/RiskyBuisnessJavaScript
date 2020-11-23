@@ -1,30 +1,42 @@
 // Constructor UfosPark
 
-function UfosPark(name){
+function UfosPark(){
     this.fee = 500;
-    this.float = [];
-};
+    this.float = new Map();
+}
 
 // Instanciador de UfosPark, si ya existe instancia devuelve esta (Patrón Singleton)
 
-var instanceUfosPark = (function () {
+function instanceUfosPark() {
 
     let instance;
 
-    function createInstance(name) {
-        var object = new UfosPark(name);
+    function createInstance() {
+        var object = new UfosPark();
         return object;
     }
  
     return {
-        getInstance: function (name) {
+        getInstance: function () {
             if (!instance) {
-                instance = createInstance(name);
+                instance = createInstance();
             }
             return instance;
         }
     };
-})();
+}
 
 // Lógica de UfosPark
 
+UfosPark.prototype.dispatch = function(creditCard){
+    if (creditCard.pay(this.fee) == true){
+
+    }
+
+}
+
+UfosPark.prototype.addUfo = function(ufo){
+    if (!this.float.has(ufo)){
+        this.float.set(ufo, null);
+    }
+}

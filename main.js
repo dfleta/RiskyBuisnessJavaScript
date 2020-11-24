@@ -17,3 +17,4 @@ ufosPark.dispatch(abradolph);
 
 console.log(abradolph);
 console.log(ufosPark);
+console.log(ufosPark.getUfoOf(abradolph));

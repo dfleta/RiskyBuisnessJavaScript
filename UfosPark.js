@@ -28,6 +28,14 @@ function singletonUfosPark() {
 
 // Lógica de UfosPark
 
+const checkCreditCardHasUfo = (map, val) => {
+    for (let value of map.values()){
+        if(val === value ){
+            return value;
+        }
+    }
+}
+
 UfosPark.prototype.dispatch = function(creditCard){
     if (!checkCreditCardHasUfo(this.float, creditCard)){
         if(creditCard.pay(this.fee) === true){
@@ -42,13 +50,12 @@ UfosPark.prototype.dispatch = function(creditCard){
     }
 }
 
-const checkCreditCardHasUfo = (map, val) => {
-    for (let value of map.values()){
-        if(val === value ){
-            return true;
+UfosPark.prototype.getUfoOf = function(creditCard){
+    for (var [key, value] of this.float){
+        if (value === creditCard){
+            return key;
         }
     }
-    return false;
 }
 
 UfosPark.prototype.addUfo = function(ufo){

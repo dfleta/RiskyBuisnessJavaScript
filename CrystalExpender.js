@@ -29,5 +29,7 @@ CrystalExpender.prototype.dispatch = function(creditCard){
 CrystalExpender.prototype.getStock = function(){
     return this.stock;
 }
-
+/**
+ * Export de singleton function
+ */
 module.exports.singletonCrystalExpender = singletonCrystalExpender;

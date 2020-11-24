@@ -1,12 +1,17 @@
 const CreditCard = require("./CreditCard.js");
 const UfosPark = require("./UfosPark");
 const CrystalExpender = require("./CrystalExpender");
+const Receptive = require("./Receptive");
 
 var abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
 var morty = new CreditCard("Morty Smith", "2134346557687964363");
-var squanch = new CreditCard("Squanchy Squanch", "876778567569879098")
+var squanch = new CreditCard("Squanchy Squanch", "876778567569879098");
+var birdMan = new CreditCard("Hombre Pájaro", "87667596747966986");
+var jerry = new CreditCard("Jerry Smith", "23523670538742");
+
 var ufosPark = UfosPark.singletonUfosPark().getInstance();
 var crystalExpender = CrystalExpender.singletonCrystalExpender(50, 50).getInstance();
+var receptive = Receptive.singletonReceptive().getInstance();
 
 console.log("\n==================== Tarjeta de Abradolph ====================\n");
 
@@ -20,6 +25,11 @@ console.log("\n==================== Tarjeta de Squanchy ====================\n")
 
 console.log(squanch);
 
+console.log("\n============== Tarjeta de Jerry sin credito ============\n");
+
+jerry.pay(3000);
+console.log(jerry);
+
 console.log("\n==================== UfosPark sin ufos ====================\n");
 
 console.log(ufosPark);
@@ -31,6 +41,14 @@ ufosPark.addUfo("dox");
 
 console.log(ufosPark);
 
+console.log("\n================ Jerry quiere un ufo ==================\n");
+
+ufosPark.dispatch(jerry);
+
+console.log(ufosPark);
+console.log(jerry);
+
+console.log("\n=========== Jerry no puede adquirir un ufo ===========\n");
 console.log("\n================ Abradolph quiere un ufo ==================\n");
 
 ufosPark.dispatch(abradolph);
@@ -89,3 +107,29 @@ crystalExpender.dispatch(squanch);
 
 console.log(crystalExpender);
 console.log(squanch);
+
+console.log("\n=============== Añadir trex y cuatrx a UfosPark ================\n");
+
+ufosPark.addUfo("trex");
+ufosPark.addUfo("cuatrx");
+
+console.log(ufosPark);
+
+console.log("\n================ Nuevo Receptivo ==================\n");
+
+console.log(receptive);
+
+console.log("\n======= Añadimos los servicios al Receptivo ========\n");
+
+receptive.registerService(ufosPark);
+receptive.registerService(crystalExpender);
+
+console.log(receptive);
+
+console.log("\n==== El Receptivo atiende a BirdMan y a Morty ====\n");
+
+receptive.dispatch(squanch);
+receptive.dispatch(birdMan);
+
+console.log(ufosPark);
+console.log(crystalExpender);

@@ -29,3 +29,5 @@ Receptive.prototype.dispatch = function(creditCard){
         service.dispatch(creditCard);
     }
 }
+
+module.exports.singletonReceptive = singletonReceptive;

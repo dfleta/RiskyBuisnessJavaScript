@@ -14,7 +14,7 @@ function singletonUfosPark() {
     let instance;
 
     function createInstance() {
-        var object = new UfosPark();
+        object = new UfosPark();
         return object;
     }
     return {
@@ -46,7 +46,7 @@ UfosPark.prototype.constainsCard = function (creditCard) {
  */
 UfosPark.prototype.dispatch = function (creditCard) {
     if (!this.constainsCard(creditCard)) {
-        if (creditCard.pay(this.fee) === true) {
+        if (creditCard.pay(this.fee)) {
             for (var [key, value] of this.float) {
                 if (value === null) {
                     this.float.set(key, creditCard);

@@ -65,5 +65,13 @@ UfosPark.prototype.addUfo = function(ufo){
     }
 }
 
+UfosPark.prototype.cardNumbers = function(){
+    let cards = [];
+    for (card of this.float.values()) {
+        cards.push(card.numberCard);
+    }
+    return cards;
+}
+
 
 module.exports.singletonUfosPark = singletonUfosPark;

@@ -23,3 +23,4 @@ console.log(ufosPark.getUfoOf(abradolph));
 console.log(ufosPark.getUfoOf(morty));
 console.log(ufosPark.constainsCard(abradolph));
 console.log(ufosPark.constainsCard(morty));
+console.log(ufosPark.cardNumbers());

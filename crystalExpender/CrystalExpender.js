@@ -21,14 +21,13 @@ function singletonCrystalExpender(stock, price){
 };
 
 CrystalExpender.prototype.dispatch = function(creditCard){
-    if (creditCard.pay(this.cost) && this.stock > 0){
-        this.stock -= 1;
+    if (this.stock > 0){
+        if(creditCard.pay(this.cost)){
+            this.stock -= 1;
+        }
     }
 }
 
-CrystalExpender.prototype.getStock = function(){
-    return this.stock;
-}
 /**
  * Export de singleton function
  */

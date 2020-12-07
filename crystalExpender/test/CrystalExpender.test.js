@@ -47,5 +47,5 @@ test("No dispatch creditCard por falta de stock", () => {
     crystalExpender.dispatch(card);
 
     expect(crystalExpender.stock).toEqual(0);
-    expect(card.credit).toEqual(2950);
+    expect(card.credit).toEqual(3000);
 });

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sebastia98/PracticaRiskyBuisnessJavaScript/issues"
   },
-  "homepage": "https://github.com/sebastia98/PracticaRiskyBuisnessJavaScript#readme"
+  "homepage": "https://github.com/sebastia98/PracticaRiskyBuisnessJavaScript#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }

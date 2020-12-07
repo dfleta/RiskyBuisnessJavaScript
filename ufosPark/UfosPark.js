@@ -30,7 +30,7 @@ function singletonUfosPark() {
  * Check if CreditCard exists in the map float
  * @param {CreditCard} val 
  */
-UfosPark.prototype.constainsCard = function (creditCard) {
+UfosPark.prototype.containsCard = function (creditCard) {
     for (let cardFloat of this.float.values()) {
         if (creditCard === cardFloat) {
             return true;
@@ -45,7 +45,7 @@ UfosPark.prototype.constainsCard = function (creditCard) {
  * @param {CreditCard} creditCard 
  */
 UfosPark.prototype.dispatch = function (creditCard) {
-    if (!this.constainsCard(creditCard)) {
+    if (!this.containsCard(creditCard)) {
         if (creditCard.pay(this.fee)) {
             for (var [key, value] of this.float) {
                 if (value === null) {

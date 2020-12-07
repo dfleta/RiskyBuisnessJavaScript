@@ -1,7 +1,7 @@
-const CreditCard = require("./CreditCard.js");
-const UfosPark = require("./UfosPark");
-const CrystalExpender = require("./CrystalExpender");
-const Receptive = require("./Receptive");
+const CreditCard = require("./creditCard/CreditCard.js");
+const UfosPark = require("./ufosPark/UfosPark");
+const CrystalExpender = require("./crystalExpender/CrystalExpender");
+const Receptive = require("./receptive/Receptive");
 
 var abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
 var morty = new CreditCard("Morty Smith", "2134346557687964363");

@@ -1,0 +1,14 @@
+{
+  "name": "ufospark",
+  "version": "1.0.0",
+  "description": "Dispatcher of Ufos",
+  "main": "UfosPark.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "sebastia98",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

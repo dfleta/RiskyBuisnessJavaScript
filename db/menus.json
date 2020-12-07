@@ -1,0 +1,42 @@
+{
+    "menu1": {
+        "menuCompleto": "Menú Dragón",
+        "plato1": "Dos rollitos de primavera",
+        "plato2": "Ternera en salsa de otras",
+        "plato3": "Helado frito",
+        "plato4": "Refresco o agua",
+        "stck": "53",
+        "price": "12",
+        "valoration": "4,2⭐"
+    },
+    "menu2": {
+        "menuCompleto": "Menú Hainan",
+        "plato1": "Ensalada china",
+        "plato2": "Pollo con setas chinas y bambú",
+        "plato3": "Helado frito",
+        "plato4": "Refresco",
+        "stck": "50",
+        "price": "25",
+        "valoration": "2,2⭐"
+    },
+    "menu3": {
+        "menuCompleto": "Menú Pekín",
+        "plato1": "Sopa de tiburón",
+        "plato2": "Pato Pekín",
+        "plato3": "Liche en su jugo",
+        "plato4": "Ramune",
+        "stck": "32",
+        "price": "23",
+        "valoration": "4,4⭐"
+    },
+    "menu4": {
+        "menuCompleto": "Menú Sichuan",
+        "plato1": "Cerdo agridulce",
+        "plato2": "Chop Suwy de gambas",
+        "plato3": "Helado con almendras",
+        "plato4": "Refresco",
+        "stck": "50",
+        "price": "48",
+        "valoration": "3,6⭐"
+    }
+}

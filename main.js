@@ -1,8 +1,12 @@
+const menus = require("./db/menus.json");
+const crystalExpenders = require("./db/crystalExpender.json");
+const ufos = require("./db/ufos.json");
+
 const CreditCard = require("./creditCard/CreditCard");
 const UfosPark = require("./ufosPark/UfosPark");
 const CrystalExpender = require("./crystalExpender/CrystalExpender");
 const Receptive = require("./receptive/Receptive");
-const RickMenu = require("./rickMenu/RickMenu")
+const RickMenu = require("./rickMenu/RickMenu");
 
 var abradolph = new CreditCard("Abradolph Lincler", "4916119711304546");
 var morty = new CreditCard("Morty Smith", "2134346557687964363");
@@ -11,8 +15,8 @@ var birdMan = new CreditCard("Hombre Pájaro", "87667596747966986");
 var jerry = new CreditCard("Jerry Smith", "23523670538742");
 
 var ufosPark = UfosPark.singletonUfosPark().getInstance();
-var crystalExpender = CrystalExpender.singletonCrystalExpender(50, 50).getInstance();
-var rickMenu = RickMenu.singletonRickMenu(50, 50).getInstance();
+var crystalExpender = CrystalExpender.singletonCrystalExpender(crystalExpenders.crystalExpender2.price, crystalExpenders.crystalExpender2.stck).getInstance();
+var rickMenu = RickMenu.singletonRickMenu(menus.menu3.stck, menus.menu3.price).getInstance();
 var receptive = Receptive.singletonReceptive().getInstance();
 
 console.log("\n==================== Tarjeta de Abradolph ====================\n");
@@ -38,8 +42,8 @@ console.log(ufosPark);
 
 console.log("\n=============== Añadir unx y dox a UfosPark ================\n");
 
-ufosPark.addUfo("unx");
-ufosPark.addUfo("dox");
+ufosPark.addUfo(ufos.ufo1.name);
+ufosPark.addUfo(ufos.ufo2.name);
 
 console.log(ufosPark);
 
@@ -112,8 +116,8 @@ console.log(squanch);
 
 console.log("\n=============== Añadir trex y cuatrx a UfosPark ================\n");
 
-ufosPark.addUfo("trex");
-ufosPark.addUfo("cuatrx");
+ufosPark.addUfo(ufos.ufo3.name);
+ufosPark.addUfo(ufos.ufo4.name);
 
 console.log(ufosPark);
 

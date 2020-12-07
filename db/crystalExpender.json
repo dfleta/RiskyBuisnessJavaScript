@@ -1,0 +1,22 @@
+{
+    "crystalExpender1": {
+        "stck": "53",
+        "price": "12",
+        "valoration": "4,2⭐"
+    },
+    "crystalExpender2": {
+        "stck": "50",
+        "price": "25",
+        "valoration": "2,2⭐"
+    },
+    "crystalExpender3": {
+        "stck": "32",
+        "price": "23",
+        "valoration": "4,4⭐"
+    },
+    "crystalExpender4": {
+        "stck": "50",
+        "price": "48",
+        "valoration": "3,6⭐"
+    }
+}

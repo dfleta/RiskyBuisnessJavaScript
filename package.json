@@ -1,0 +1,19 @@
+{
+  "name": "riskybuisness",
+  "version": "1.0.0",
+  "description": "Automatic dispatcher of Rick's party",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastia98/PracticaRiskyBuisnessJavaScript.git"
+  },
+  "author": "sebastia98",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebastia98/PracticaRiskyBuisnessJavaScript/issues"
+  },
+  "homepage": "https://github.com/sebastia98/PracticaRiskyBuisnessJavaScript#readme"
+}

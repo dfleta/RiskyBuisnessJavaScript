@@ -1,0 +1,14 @@
+{
+  "name": "crystalexpender",
+  "version": "1.0.0",
+  "description": "Crystal Expender",
+  "main": "CrystalExpender.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "sebastia98",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

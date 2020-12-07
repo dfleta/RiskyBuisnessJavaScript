@@ -16,7 +16,7 @@ test("Crear crystalExpender", () => {
     var crystalExpenderExpected = {
         cost : 50,
         stock : 50
-    }
+    };
     expect(crystalExpenderActual).toEqual(crystalExpenderExpected);
 });
 

@@ -30,6 +30,26 @@ También hemos usado metología Scrum para poner en común todos los conflictos 
 
 También hemos usado alguna referencia de Git Flow. A la master no se le hacía ningún commit directamente. La rama principal era development, y cada cambio o implementación nueva se creaba otra rama a partir de esta. Al terminar se hacía un pull request a development. Finalmente se ha hecho un pull request a la master de development.
 
+## Instalación de la aplicación
+
+Clona el repositorio.
+
+    git clone "url_repo"
+
+Dirigete al directorio e instala el node
+
+    cd riskyBuisness
+
+    sudo apt-get install nodejs
+
+Para ejecutar la aplicación hay que lanzar el script principal. Para ello, dentro del repo ejecuta el comando
+
+    node main.js
+
+En este repo vienen todos las librerías de jest y npm para gestionar las dependencias y testear el proyecto. Para comprobar los casos test usamos el comando.
+
+    npm test
+
 ### Incidencias
 
 Al primero subir todos los módulos y luego subir los ficheros .gitignore y .npmignore, se pueden ver ficheros y directorios de configuración de npm en el repositorio remoto.
